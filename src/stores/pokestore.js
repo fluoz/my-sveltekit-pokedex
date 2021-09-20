@@ -10,7 +10,7 @@ const fetchPokemon = async () => {
     const data = await res.json();
     const loadedPokemon = data.results.map((data, index) => ({
         name: data.name,
-        index: index + 1,
+        id: index + 1,
         image: `https://raw.githubusercontent.com/pokeApi/sprites/master/sprites/pokemon/${index + 1}.png`
     }));
     pokemon.set(loadedPokemon);
