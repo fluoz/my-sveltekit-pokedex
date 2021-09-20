@@ -1,3 +1,9 @@
-<main>
-	<h1 class="font-bold text-[#00f]">SvelteKit Pokedex</h1>
-</main>
+<script>
+	import { pokemon } from '../stores/pokestore';
+</script>
+
+<h1>SvelteKit Pokedex</h1>
+
+{#each $pokemon as pokeman}
+	<p>{pokeman.name}</p>
+{/each}
